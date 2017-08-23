@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- com/fz/mampepr/StudentMapper.xml 影射配置文件位置 -->
+<mapper namespace="com.fz.mapper.StudentMapper">
+
+    <!-- 此处结果类型 resultType 指定的student 为com.fz.entity.Student实体类别名 -->
+    <select id="query" resultType="student">
+        select * from bb
+    </select>
+
+    <delete id="deleteById" parameterType="int">
+        delete from bb where id=#{id}
+    </delete>
+</mapper>
